@@ -1,0 +1,6 @@
+name: CS7150
+dependencies:
+  - python=3.6
+  - pip
+  - pip:
+      - pytest==5.3.5
