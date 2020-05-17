@@ -1,0 +1,32 @@
+Overtime during training the distribution of each layer's input change as the parameters of the previous layers change. This leads to slowdown learning by requiring lower learning rate, careful initialization and makes it hard to train models with saturating nonlinearities. This is known as internal covariate shift.
+
+A saturating activation function squeezes the input.
+e.g. Sigmoid and tanh
+Relu is an example of non saturating function.
+
+Covariates are the characteristics of the participants in an experiment.
+
+Latent (hidden in latin) variable is a variable that you never observe.
+
+Gamma and beta are used to fix the input distribution over time
+
+Why does normalization helps?
+	Without normalization, if the features are having different scale.
+	e.g f1 -> 0..1, f2 -> 0..1000
+	Then the resulting loss function will be elongated and the contours will be eliptical.
+	Hence we need to use lower learning rates. 
+
+	Normalization scales all the features nearly to almost same scale.
+	The the resulting loss function will be almost symmetrical and the contours will be almost circular.
+	Hence we can use comparatively higher learning rates. 
+
+Initialization Weights of neural networks
+	a=g(z), where z = w1*x1 + w2*x2 + .... wn*xn
+	if n is large then we want weights to be small.
+	a reasonable thing to do is to set 
+	var(w[i]) = 1/n, for relu it turns out 2/n works better
+	w^[l] = np.random.randn(shape) * np.sqrt(1/n^[l-1])
+	where l is the layer number
+
+Video
+	How does batch normalization help training? https://www.youtube.com/watch?v=ZOabsYbmBRM
