@@ -11,3 +11,5 @@ dependencies:
   - cudatoolkit=10.0
   - pip:
       - pytest==5.3.5
+      - jupyter
+      - matplotlib==3.2.1
