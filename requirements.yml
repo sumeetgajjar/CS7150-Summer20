@@ -1,6 +1,13 @@
-name: CS7150
+name: MLDL
+
+channels:
+  - pytorch
+
 dependencies:
   - python=3.6
   - pip
+  - pytorch
+  - torchvision
+  - cudatoolkit=10.0
   - pip:
       - pytest==5.3.5
