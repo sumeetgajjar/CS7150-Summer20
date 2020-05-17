@@ -8,8 +8,9 @@ dependencies:
   - pip
   - pytorch
   - torchvision
-  - cudatoolkit=10.0
+  - cudatoolkit=10.2
   - pip:
       - pytest==5.3.5
       - jupyter
       - matplotlib==3.2.1
+      - tensorboard==2.2.1
